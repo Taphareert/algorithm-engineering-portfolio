@@ -1,0 +1,223 @@
+/*StyleIntroduction.css*/
+
+.page {
+  height: 65vh;
+  /* min-height: 100vh; แทน height ตายตัว */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  animation: reval linear both;
+  animation-timeline: view();
+  animation-range: entry 30% cover 50%;
+}
+@keyframes reval {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.one{
+  font-size: 1rem;
+}
+.two {
+ 
+  h1 {
+    text-align: center;
+    color: var(--neon-blue);
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .intro {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #8b949e;
+  }
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+      0 10px 20px rgba(0, 0, 0, 0.5),
+      0 0 15px var(--neon-blue);
+    border-color: var(--neon-blue);
+  }
+
+  .icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  h3 {
+    margin: 10px 0;
+    color: #fff;
+  }
+  p {
+    font-size: 1rem;
+    color: #8b949e;
+    line-height: 1.5;
+  }
+
+  .article pre{
+    font-size: 0.9em;
+    color: #8b949e;
+    line-height: 1.5;
+  }
+}
+.two .article pre {
+  font-size: 0.95rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--text-main);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.selected {
+  background-color: white;
+  transform: scale(1.3);
+}
+
+.pagination {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.container {
+  height: 78vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  padding: 15px;
+
+  div {
+    color: var(--text-main);
+    font-size: 1em;
+  }
+
+  .one h1 {
+    font-size: 2em;
+    color: var(--text-main);
+  }
+
+  .one h1 span {
+    font-size: 1em;
+    color: var(--neon-blue);
+  }
+
+  scroll-snap-align: none; /* ปิด snap เพื่อให้นิ่งขึ้น */
+    padding: 20px 0;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.stretched-link::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+}
+h1 { font-size: 1.875rem; font-weight: 600; }
+h2 { font-size: 1.5rem;   font-weight: 600; }
+h3 { font-size: 1.25rem;  font-weight: 600; }
+h4 { font-size: 1.125rem; font-weight: 600; }
+p  { font-size: 1rem; }
+
+@media (max-width: 700px) {
+
+  .two .grid-container{
+    max-width:350px;
+  }
+  .two .card-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .two .grid-container {
+    display: flex;          /* เปลี่ยนจาก grid */
+    flex-wrap: nowrap;      /* ห้ามขึ้นบรรทัดใหม่ */
+    gap: 20px;
+  }
+
+  .two .card {
+    min-width: 80vw;        /* เห็นทีละ 1 ใบ */
+    flex-shrink: 0;         /* ห้ามย่อ */
+    scroll-snap-align: center;
+    max-width: 350px;
+  }
+
+}
+@media (max-width: 390px) {
+
+  .two .grid-container {
+    gap: 15px;              /* ลดช่องว่าง */
+  }
+  .two .card {
+    min-width: 92vw;        /* ให้เต็มจอมากขึ้น */
+    max-width: 92vw;        /* กัน overflow */
+    padding: 16px;          /* ลด padding นิดนึง */
+  }
+
+  .two h3 {
+    font-size: 1rem;        /* ลดหัวข้อ */
+  }
+
+  .two p {
+    font-size: 0.9rem;      /* ลดข้อความ */
+  }
+}

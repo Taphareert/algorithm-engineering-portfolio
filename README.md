@@ -1,62 +1,101 @@
-Hybrid BPSO Feature Selection: High-Performance ML Optimization
-English Version | ภาษาไทย
+# Computer Engineering Student | Software Engineering & Backend Focus
 
-🇬🇧 English Version
-    Overview :
-    This project implements a High-Performance Feature Selection System using Binary 
-    Particle Swarm Optimization (BPSO). By leveraging a hybrid architecture of C++ 
-    for the core engine and Python for machine learning workflows, 
-    the system achieves massive inference speedups 
-    while maintaining high predictive accuracy.
+ผมเป็นนักศึกษาวิศวกรรมคอมพิวเตอร์และการสื่อสาร  
+สนใจด้าน Software Engineering, Backend Development และ Algorithm Design
 
-    Key Achievements : 
-        - 83.3% Data Reduction: Successfully pruned 30 features down to 5 essential features (Indices: 3, 4, 21, 23, 28).
-        - Massive Inference Speedup: * SVM: Improved performance by ~327x (0.464s → 0.001s).
-        - KNN: Improved performance by ~670x (1.268s → 0.001s).
-        - Accuracy Preservation: Maintained a peak accuracy of 96.49% (SVM) even with significantly fewer features.
+Repository นี้รวบรวมผลงานฝึกฝนด้าน Algorithm, Data Structure  
+รวมถึงโปรเจค Web-based ที่พัฒนาด้วยแนวคิดเชิงระบบ
 
-    System Architecture :
-        The system is built on a "Quality over Quantity" philosophy :
-            1.Core Engine (C++17): Handles complex PSO calculations, particle updates, and fitness evaluations using Multi-threading (std::thread) and Atomic operations for maximum efficiency.
+---
 
-            2.Fitness Evaluation: Utilizes the Fisher Score criterion combined with a feature ratio penalty to ensure a lean and effective feature subset.
-            Fitness = Avg Fisher Score - (0.05 x Feature Ratio)
+##  Technical Interests
 
-            3.Python Integration: Seamlessly exposed to Python via Pybind11, allowing standard Scikit-learn models to consume the optimized data.
+- Data Structures & Algorithms
+- Backend Development
+- System Logic & Problem Solving
+- Basic System Design
+- Pathfinding Algorithms
+- Machine Learning (ทดลองศึกษา)
 
-🇹🇭 ภาษาไทย
-    ภาพรวมโปรเจกต์ :
-        ระบบคัดเลือกคุณลักษณะ (Feature Selection) ประสิทธิภาพสูงที่ใช้ Binary Particle Swarm Optimization (BPSO) 
-        ในการเฟ้นหาชุดข้อมูลที่สำคัญที่สุด โปรเจกต์นี้ชูจุดเด่นด้วยสถาปัตยกรรมแบบ Hybrid (C++/Python) เพื่อดึงพลังการคำนวณสูงสุดจากฮาร์ดแวร์.
+---
 
-    ความสำเร็จหลัก :
-        - การลดขนาดข้อมูล: สามารถลดจำนวนคุณลักษณะจาก 30 เหลือเพียง 5 ตัว ที่สำคัญที่สุด.
-        - การเพิ่มความเร็ว (Optimization):
-            - SVM: ทำงานเร็วขึ้นกว่าเดิม 327 เท่า.
-            - KNN: ทำงานเร็วขึ้นกว่าเดิม 670 เท่า.
-        - ความแม่นยำ: รักษาค่า Accuracy ไว้ได้ที่ 96.49% แม้จะใช้ข้อมูลลดลงกว่า 80%.
-  
-    โครงสร้างทางเทคนิค :
-        1.Core Engine (C++): พัฒนาส่วนการคำนวณ PSO ด้วย C++ พร้อมระบบการทำงานแบบขนาน (Multi-threading) เพื่อรองรับข้อมูลขนาดใหญ่.
-        2.Fitness Function: ใช้เกณฑ์ Fisher Score ในการตัดสินใจเลือกคุณลักษณะ โดยมีบทลงโทษ (Penalty) สำหรับชุดข้อมูลที่ใหญ่เกินไปเพื่อให้ได้ผลลัพธ์ที่กระชับที่สุด.
-        3.Python Integration: เชื่อมต่อโมดูล C++ เข้ากับ Python ผ่าน Pybind11 ทำให้ใช้งานร่วมกับโมดูล Machine Learning อื่นๆ ได้ทันที.
+##  Technical Skills
 
-Installation & Usage :
-    Prerequisites:
-        - C++ Compiler (MSVC for Windows / GCC for Linux)
-        - Python 3.11+
-        - pybind11, numpy, scikit-learn
+### Languages
+- Java
+- Python
+- C / C++
+- JavaScript (Logic-focused)
 
-Building the Extension :
-    Compile the C++ Core into a Python-callable module :
-        - python setup.py build_ext --inplace
+### Core Knowledge
+- Object-Oriented Programming (OOP)
+- Linked List / Stack
+- Recursion (Tower of Hanoi)
+- Infix to Postfix Conversion
+- Pathfinding (A*, Dijkstra)
+- Min Heap Implementation
+- Algorithm Complexity (O(n²) → O(n) Optimization)
+- Basic Machine Learning Model Comparison
 
-Running the Benchmark :
-    Examine the comparison between original and optimized models :
-        - python -m index
+---
 
-Project Structure :
-    - ML/Computational_Intelligence: C++ Core PSO Engine and Fitness logic.
-    - ML/model: Machine Learning model implementations (SVM, KNN, RF, DT).
-    - ML/SetUp: Build configurations for the hybrid system.
-    - index.py: Main entry point for performance benchmarking.  
+#  Repository Structure
+
+##  Java-Algorithms
+แบบฝึกหัด Algorithm ด้วย Java  
+เน้นพื้นฐานโครงสร้างข้อมูลและตรรกะ
+
+- GCD (Euclidean Algorithm)
+- Prime Number
+- Linked List Implementation
+- Infix to Postfix + Expression Evaluation
+- Towers of Hanoi (Recursion)
+
+---
+
+##  python-algorithm-practice
+ชุดแบบฝึกหัด Algorithm ด้วย Python  
+เน้น Clean Function และ Separation of Concerns
+
+- Two Sum (Brute Force vs HashMap Optimization)
+- Manual Frequency Counter
+- Anagram Checker
+- Caesar Cipher
+- Character Status Generator (Validation-focused)
+
+---
+
+##  The Algorithm Vault
+
+Web-based Algorithm Platform
+
+ประกอบด้วย:
+
+- Caesar Cipher Visualizer
+- Infix to Postfix Calculator
+- Linked List / Stack Visualization
+- Nested Loops Pattern Studio
+- Pathfinding Visualizer (A* & Dijkstra)
+- Tower of Hanoi Simulation
+
+มีทั้งฝั่ง Frontend (HTML/CSS/JS)  
+และ Backend API พื้นฐาน
+
+---
+
+##  Career Objective
+
+กำลังมองหาโอกาสฝึกงาน / Junior Position ในสาย:
+
+- Software Engineer
+- Backend Developer
+- Software Developer
+
+ผมเน้นการพัฒนา Logic และโครงสร้างโค้ดที่ชัดเจน  
+พร้อมเรียนรู้และปรับตัวกับเทคโนโลยีใหม่ได้อย่างรวดเร็ว
+
+---
+
+##  Contact
+
+Email: just.a.thin.lines@gmail.com
